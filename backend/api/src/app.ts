@@ -9,6 +9,7 @@ import path from "path";
 import { router } from "./routes";
 import swaggerDef from "./swagger-spec.json";
 import { ProtoGrpcType } from "./protoBufferTypes/order-service";
+import { createDefaultAdmin, createRolesDefault } from "./seed";
 
 const PORT = process.env.PORT || 8080;
 
@@ -62,7 +63,9 @@ const start = async () => {
   try {
     // Method to make express service start to listen requests in port defined by const PORT.
     if (process.env.NODE_ENV !== "test")
-      app.listen(PORT, () => {
+      app.listen(PORT, async () => {
+        await createRolesDefault();
+        await createDefaultAdmin();
         console.log(`API RUN IN: ${process.env.ORIGIN_URL}`);
       });
   } catch (error) {

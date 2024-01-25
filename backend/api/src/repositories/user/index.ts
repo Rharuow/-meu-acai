@@ -92,7 +92,7 @@ export const getUserByNameAndPassword = async (
     includes,
   });
   if (!userInMemory.hasItem(reference)) {
-    const user = await prismaClient.user.findUniqueOrThrow(
+    const user = await prismaClient.user.findUnique(
       createQuery(params, includes)
     );
     userInMemory.storeExpiringItem(
