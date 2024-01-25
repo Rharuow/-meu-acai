@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "es6"
+    ],
+    "allowUnreachableCode": false,
+    "noImplicitReturns": true,
+    "allowJs": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "paths": {
+      "@repositories/*": [
+        "./src/repositories/*"
+      ],
+      "@services/*": [
+        "./src/services/*"
+      ],
+      "@middlewares/*": [
+        "./src/middlewares/*"
+      ],
+      "@models/*": [
+        "./src/models/*"
+      ],
+      "@serializer/*": [
+        "./src/serializer/*"
+      ],
+      "@routes/*": [
+        "./src/routes/*"
+      ],
+      "@controllers/*": [
+        "./src/controllers/*"
+      ],
+      "@libs/*": [
+        "./src/libs/*"
+      ],
+      "@/*": [
+        "./src/*"
+      ],
+    },
+  },
+  "include": [
+    "./src/**/*",
+  ],
+  "types": [
+    "@types/jest"
+  ],
+  "exclude": [
+    "./plugins/**/*",
+    "./typings/**/*",
+    "./build/**/*"
+  ]
+}
