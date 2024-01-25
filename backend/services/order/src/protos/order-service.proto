@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+service OrderService {
+  rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse);
+  rpc GetOrder (GetOrderRequest) returns (GetOrderResponse);
+  rpc ListOrder (ListOrderRequest) returns (ListOrderResponse);
+}
+
+message GetOrderRequest {
+  string id = 1;
+}
+
+message GetOrderResponse {
+  string id = 1;
+  string name = 2;
+  string size = 3;
+  string paymentMethod = 4;
+  bool isPaid = 5;
+  int32 maxCreamsAllowed = 6; 
+  int32 maxToppingsAllowed = 7; 
+  int32 price = 8; 
+  int32 totalPrice = 9;
+  string status = 10;
+  repeated Cream creams = 11; 
+  repeated Extra extras = 12; 
+  repeated Topping toppings = 13;
+  string userId = 14;
+}
+
+message CreateOrderRequest {
+  string name = 1;
+  string size = 2;
+  string paymentMethod = 3;
+  bool isPaid = 4;
+  int32 maxCreamsAllowed = 5; 
+  int32 maxToppingsAllowed = 6; 
+  int32 price = 7; 
+  int32 totalPrice = 8;
+  string status = 9;
+  repeated Cream creams = 10; 
+  repeated Extra extras = 11; 
+  repeated Topping toppings = 12;
+  string userId = 13;
+}
+
+message Cream {
+  string id = 1;
+  string name = 2;
+  int32 price = 3;
+}
+
+message Extra {
+  string id = 1;
+  string name = 2;
+  int32 price = 3;
+}
+
+message Topping {
+  string id = 1;
+  string name = 2;
+  int32 price = 3;
+}
+
+message CreateOrderResponse {
+  string id = 1;
+}
+
+message ListOrderRequest {
+  int32 page = 1;
+  int32 perPage = 2;
+  string orderBy = 3;
+  string filter = 4;
+}
+
+message ListOrderResponse {
+  repeated GetOrderResponse orders = 1;
+  int32 totalPages = 2;
+}

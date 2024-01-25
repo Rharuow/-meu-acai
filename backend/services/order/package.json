@@ -1,0 +1,59 @@
+{
+  "name": "api-order",
+  "version": "1.0.0",
+  "description": "microservice to handle order of meu açai application",
+  "main": "app.ts",
+  "repository": "https://github.com/Rharuow/meu-acai-api-order",
+  "author": "Rharuow",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+    "start": "node build/app.js",
+    "dev": "cross-env NODE_ENV=development nodemon"
+  },
+  "_moduleAliases": {
+    "@controllers": "src/controllers",
+    "@models": "src/models",
+    "@middlewares": "src/middlewares",
+    "@serializer": "src/serializer",
+    "@routes": "src/routes",
+    "@services": "src/services",
+    "@libs": "src/libs",
+    "@repositories": "src/repositories"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.9.13",
+    "@grpc/proto-loader": "^0.7.10",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "kafkajs": "^2.2.4",
+    "memory-cache-node": "^1.4.0",
+    "mongoose": "^8.0.3"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.7",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/fs-extra": "^11.0.4",
+    "@types/jest": "^29.5.11",
+    "@types/kafkajs": "^1.9.0",
+    "@types/module-alias": "^2.0.4",
+    "@types/mongoose": "^5.11.97",
+    "@types/supertest": "^6.0.2",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.6",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "module-alias": "^2.2.3",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}
