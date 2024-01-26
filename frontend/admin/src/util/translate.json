@@ -5,6 +5,9 @@
         "form": {
           "required": "Este campo é obrigatório"
         }
+      },
+      "404": {
+        "Ops... Not found here...": "Ops... Nada encontrado aqui..."
       }
     },
     "messages": {
@@ -23,6 +26,9 @@
         "form": {
           "required": "required"
         }
+      },
+      "404": {
+        "Ops... Not found here...": "Ops... Not found here..."
       }
     },
     "messages": {
