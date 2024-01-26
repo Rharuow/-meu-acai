@@ -10,7 +10,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Eye, EyeOff } from "lucide-react";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { z } from "zod";
@@ -21,6 +20,7 @@ import { setCookie } from "cookies-next";
 import { useToast } from "@/components/ui/use-toast";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useRouter } from "next/navigation";
+import { Image } from "@/components/ui/image";
 
 const signInFormSchema = z.object({
   name: z
@@ -70,20 +70,16 @@ export const SignIn = () => {
   }, []);
 
   return (
-    <main className="flex min-h-screen items-center justify-center">
+    <main className="flex min-h-screen flex-col items-center justify-center gap-3">
+      <Image
+        className="h-auto w-[250px] object-contain"
+        alt="logo of market place"
+        src="/logo.png"
+      />
       {loading ? (
         <Skeleton className="h-[304px] w-[269px] rounded-lg" />
       ) : (
         <Card className="flex flex-col items-center gap-5 bg-[var(--primary)] p-3">
-          <Image
-            width={0}
-            height={0}
-            priority
-            sizes="100vw"
-            className="h-auto w-[200px] object-contain"
-            alt="logo of market place"
-            src="/logo.png"
-          />
           <FormProvider {...methods}>
             <form
               className="flex flex-col gap-3"

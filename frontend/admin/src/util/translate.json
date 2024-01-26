@@ -5,11 +5,15 @@
         "form": {
           "required": "Este campo é obrigatório"
         }
+      },
+      "404": {
+        "Ops... Not found here...": "Ops... Nada encontrado aqui..."
       }
     },
     "messages": {
       "generic": {
-        "Try again later...": "Tente novamente mais tarde..."
+        "Try again later...": "Tente novamente mais tarde...",
+        "Back": "Voltar"
       },
       "error": {
         "Uh oh! Something went wrong.": "Ops! Alguma coisa saiu errado.",
@@ -23,11 +27,15 @@
         "form": {
           "required": "required"
         }
+      },
+      "404": {
+        "Ops... Not found here...": "Ops... Not found here..."
       }
     },
     "messages": {
       "generic": {
-        "Try again later...": "Try again later..."
+        "Try again later...": "Try again later...",
+        "Back": "Back"
       },
       "error": {
         "Uh oh! Something went wrong.": "Uh oh! Something went wrong.",
