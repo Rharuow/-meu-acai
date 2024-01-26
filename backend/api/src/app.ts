@@ -19,8 +19,13 @@ const app = express();
 // Adding middleware cores to express services
 app.use(cors());
 
-app.use((_, res, next) => {
-  res.header("Access-Control-Allow-Origin", process.env.ORIGIN_URL); // Adjust as needed for CORS
+app.use((req, res, next) => {
+  const allowedOrigins = [process.env.ORIGIN_URL, process.env.APP_URL]; // Add your allowed origins here
+
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header("Access-Control-Allow-Origin", origin);
+  } // Adjust as needed for CORS
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept, Authorization"
