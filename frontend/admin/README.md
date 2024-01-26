@@ -4,13 +4,13 @@ This project is a front-end for the ice creams market place.
 
 ## To-do
 
-- [ ] Home page
+- [x] Home page
 
   > **Tip:** This is the initial page for the ice creams market place Admin plataform
 
-  - [ ] Verify if has 'session' in cookie
-  - [ ] If not found 'session' in cookie, show the sign in page
-  - [ ] If has 'session' in cookie, show the dashboard page
+  - [x] Verify if has 'session' in cookie
+  - [x] If not found 'session' in cookie, show the sign in page
+  - [x] If has 'session' in cookie, show the dashboard page
 
 - [x] Sign in page
 
