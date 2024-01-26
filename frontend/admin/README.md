@@ -22,7 +22,7 @@ This project is a front-end for the ice creams market place.
   - [x] Submit the form to the router (/api/v1/signin) of the API server
   - [x] Save in cookie 'session' the session.
 
-- [ ] Not Found page
+- [x] Not Found page
   - [x] Add lottie
   - [x] Add text saying "Ops... Not found here..."
-  - [ ] Button to back navigation
+  - [x] Button to back navigation
