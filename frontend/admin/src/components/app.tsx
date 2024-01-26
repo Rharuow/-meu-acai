@@ -10,6 +10,8 @@ export const App = ({ children }: { children: ReactNode }) => {
           :root {
             --primary: #00adef;
             --secondary: #ffb74d;
+            --primary-active: #009cdd;
+            --secondary-active: #e6a549;
           }
         `}
       </style>

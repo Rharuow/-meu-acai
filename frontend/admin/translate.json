@@ -1,0 +1,11 @@
+{
+  "pt-BR": {
+    "pages": {
+      "signIn": {
+        "form": {
+          "required": "Este campo é obrigatório"
+        }
+      }
+    }
+  }
+}
